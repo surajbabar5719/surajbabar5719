@@ -38,7 +38,7 @@
                 redirect: 'follow'
             };
             // make API call with parameters and use promises to get response
-            fetch("YOUR-API-INVOKE-URL", requestOptions)
+            fetch("https://9fx65p4nik.execute-api.ap-south-1.amazonaws.com/dev", requestOptions)
             .then(response => response.text())
             .then(result => alert(JSON.parse(result).body))
             .catch(error => console.log('error', error));
@@ -52,7 +52,7 @@
         <label>Last Name :</label>
         <input type="text" id="lName">
         <!-- set button onClick method to call function we defined passing input values as parameters -->
-        <button type="button" onclick="callAPI(document.getElementById('fName').value,document.getElementById('lName').value)">Call API</button>
+        <button type="button" onclick="callAPI(document.getElementById('fName').value,document.getElementById('lName').value)">Get Greetings</button>
     </form>
 </body>
 </html>
